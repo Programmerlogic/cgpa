@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Enter SGPA</h1>
+	<center><h4>(Scroll down for CGPA)</h4></center>
+    <form method="post">
+        <label for="sem1">Semester 1:</label>
+        <input type="number" name="sem1" step="0.001" required><br>
+        
+        <label for="sem2">Semester 2:</label>
+        <input type="number" name="sem2" step="0.001" required><br>
+        
+        <label for="sem3">Semester 3:</label>
+        <input type="number" name="sem3" step="0.001" required><br>
+        
+        <label for="sem4">Semester 4:</label>
+        <input type="number" name="sem4" step="0.001" required><br>
+        
+        <label for="sem5">Semester 5:</label>
+        <input type="number" name="sem5" step="0.001" required><br>
+        
+        <label for="sem6">Semester 6:</label>
+        <input type="number" name="sem6" step="0.001" required><br>
+        
+        <input type="submit" value="Calculate CGPA">
+    </form>
+    
+    {% if cgpa %}
+    <h2>Calculated CGPA: {{ cgpa }}</h2>
+    {% endif %}
+</body>
+</html>
